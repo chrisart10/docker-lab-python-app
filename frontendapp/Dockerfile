@@ -3,7 +3,8 @@ FROM python:latest
 
 #install update
 RUN apt-get update
-RUN pip install --upgrade pip
+RUN apt-get install python3-pip
+RUN pip3 install pipenv
 
 # set the working directory in the container
 WORKDIR /code
