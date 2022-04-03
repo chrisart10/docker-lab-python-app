@@ -3,20 +3,15 @@ FROM python:latest
 
 #install update
 RUN apt-get update
-RUN apt-get install python3-pip - exit 0
-RUN pip3 install pipenv - exit 0
+
+# add code to src
+ADD . /src
 
 # set the working directory in the container
-WORKDIR /code
-
-# copy the dependencies file to the working directory
-COPY requirements.txt requirements.txt 
+WORKDIR /src
 
 # install dependencies
-RUN pip3 install -r requirements.txt - exit 0
-
-# copy the content of the local src directory to the working directory
-COPY src/ .
+RUN pip install -r requirements.txt
 
 # command to run on container start
 CMD ["streamlit", "run" "main.py"]
