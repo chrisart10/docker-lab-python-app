@@ -3,13 +3,16 @@ services:
   backend:
     build: ./backendapp
     ports:
-      - "5001:8000"
+      - "8000:8000"
     networks:
       - backend-network
+
   frontend:
     build: ./frontendapp
     ports:
       - "5002:8501"
+    depends_on:
+      - backend
 
 networks:
   backend-network:
