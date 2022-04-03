@@ -3,17 +3,17 @@ FROM python:latest
 
 #install update
 RUN apt-get update
-RUN apt-get install python3-pip
-RUN pip3 install pipenv
+RUN apt-get install python3-pip - exit 0
+RUN pip3 install pipenv - exit 0
 
 # set the working directory in the container
 WORKDIR /code
 
 # copy the dependencies file to the working directory
-COPY requirements.txt requirements.txt
+COPY requirements.txt requirements.txt 
 
 # install dependencies
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt - exit 0
 
 # copy the content of the local src directory to the working directory
 COPY src/ .
