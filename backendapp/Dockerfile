@@ -3,7 +3,7 @@ FROM python:3.10
 
 #install update
 RUN apt-get update
-
+RUN pip install --upgrade pip
 # set the working directory in the container
 WORKDIR /code
 
