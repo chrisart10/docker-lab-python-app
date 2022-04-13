@@ -1,18 +1,27 @@
 version: '3'
 services:
   backend:
-    build: ./backendapp
+    container_name: backend_app
+    build: 
+      context: ./backendapp
+      dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "5001:80"
     networks:
       - backend-network
 
   frontend:
-    build: ./frontendapp
+    container_name: frontend_app
+    build: 
+      context: ./frontendapp
+      dockerfile: Dockerfile
     ports:
       - "5002:80"
+    networks:
+      - backend-network
     depends_on:
       - backend
 
 networks:
   backend-network:
+    driver: bridge
