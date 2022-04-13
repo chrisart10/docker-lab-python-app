@@ -1,5 +1,5 @@
 # set base image (host OS)
-FROM python:latest
+FROM python:3.8-slim
 
 #install update
 RUN apt-get update

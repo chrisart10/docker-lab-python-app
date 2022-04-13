@@ -1,0 +1,6 @@
+IDEAS.txt
+backendapp/src/__pycache__
+backendapp/venv
+frontendapp/__pycache__
+frontendapp/venv
+frontendapp/utils/__pycache__
