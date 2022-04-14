@@ -47,7 +47,7 @@ verify containers
 $ docker ps -a
 ```
 
-Kill containers to stop
+Kill containers to stop services
 ```bash
 $ docker-compose down
 ```
