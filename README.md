@@ -37,7 +37,7 @@ Go to the project directory
 $ cd docker-lab-python-app
 ```
 
-Run with docker and start the
+Run with docker to start services.
 ```bash
 $ docker-compose up --build -d
 ```
